@@ -3,6 +3,7 @@ import { Callout } from '../components/callout';
 import { SectionHeading } from '../components/section-heading';
 import { siteContent } from '../content';
 import { usePageTitle } from '../lib/page-title';
+import { resolveContentPath } from '../lib/pages-base-path';
 import { rootRoute } from './root';
 
 function AboutPage() {
@@ -45,7 +46,7 @@ function AboutPage() {
         <div className="space-y-6">
           <figure className="portfolio-panel portfolio-panel-soft overflow-hidden p-3">
             <img
-              src={siteContent.visuals.farmPhoto.src}
+              src={resolveContentPath(siteContent.visuals.farmPhoto.src)}
               alt={siteContent.visuals.farmPhoto.alt}
               className="aspect-[4/5] w-full rounded-[1.5rem] object-cover"
             />
@@ -92,7 +93,7 @@ function AboutPage() {
               className="portfolio-panel portfolio-panel-warm overflow-hidden p-3"
             >
               <img
-                src={projectImage.src}
+                src={resolveContentPath(projectImage.src)}
                 alt={projectImage.alt}
                 className="aspect-[4/3] w-full rounded-[1.5rem] object-cover"
               />

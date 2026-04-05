@@ -4,18 +4,20 @@ import { Callout } from '../components/callout';
 import { SectionHeading } from '../components/section-heading';
 import { siteContent } from '../content';
 import { usePageTitle } from '../lib/page-title';
+import { resolveContentPath } from '../lib/pages-base-path';
 import { isUsableExternalHref } from '../lib/placeholder';
 import { rootRoute } from './root';
 
 function contactCard(label: string, href: string, helper: string, displayValue?: ReactNode) {
   const configured = isUsableExternalHref(href);
+  const resolvedHref = resolveContentPath(href);
 
   return (
     <div className="portfolio-panel portfolio-panel-soft p-6">
       <p className="portfolio-kicker">{label}</p>
       {configured ? (
         <a
-          href={href}
+          href={resolvedHref}
           target={href.startsWith('mailto:') ? undefined : '_blank'}
           rel={href.startsWith('mailto:') ? undefined : 'noreferrer'}
           className="portfolio-link mt-4 inline-flex text-lg font-semibold"

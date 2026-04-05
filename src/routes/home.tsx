@@ -3,6 +3,7 @@ import { ProjectCard } from '../components/project-card';
 import { SectionHeading } from '../components/section-heading';
 import { featuredProjects, getProjectBySlug, siteContent } from '../content';
 import { usePageTitle } from '../lib/page-title';
+import { resolveContentPath } from '../lib/pages-base-path';
 import { isUsableExternalHref } from '../lib/placeholder';
 import { rootRoute } from './root';
 
@@ -83,7 +84,7 @@ function HomePage() {
         <div className="space-y-4">
           <figure className="portfolio-panel portfolio-panel-soft overflow-hidden p-3">
             <img
-              src={siteContent.visuals.headshot.src}
+              src={resolveContentPath(siteContent.visuals.headshot.src)}
               alt={siteContent.visuals.headshot.alt}
               className="aspect-[4/5] w-full rounded-[1.5rem] object-cover"
             />
@@ -117,7 +118,7 @@ function HomePage() {
           <div className="portfolio-panel portfolio-panel-cool overflow-hidden p-3">
             <figure className="space-y-2">
               <img
-                src={siteContent.visuals.vendrixNotice.src}
+                src={resolveContentPath(siteContent.visuals.vendrixNotice.src)}
                 alt={siteContent.visuals.vendrixNotice.alt}
                 className="aspect-[16/9] w-full rounded-[1.5rem] object-cover"
               />

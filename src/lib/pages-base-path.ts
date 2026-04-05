@@ -18,6 +18,23 @@ export function toRouterBasePath(baseUrl: string): string {
   return normalized === '/' ? normalized : normalized.slice(0, -1);
 }
 
+export function withBasePath(pathname: string, basePath: string): string {
+  if (!pathname.startsWith('/') || pathname.startsWith('//')) {
+    return pathname;
+  }
+
+  const normalizedBasePath = normalizeBasePath(basePath);
+  if (normalizedBasePath === '/') {
+    return pathname;
+  }
+
+  return `${normalizedBasePath}${pathname.slice(1)}`;
+}
+
+export function resolveContentPath(pathname: string): string {
+  return withBasePath(pathname, import.meta.env.BASE_URL);
+}
+
 export function resolvePagesBasePath(env: PagesBasePathEnv): string {
   const explicitBasePath = env.SITE_BASE_PATH?.trim();
   if (explicitBasePath) {

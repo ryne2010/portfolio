@@ -3,6 +3,7 @@ import { Callout } from '../components/callout';
 import { SectionHeading } from '../components/section-heading';
 import { experienceContent } from '../content';
 import { usePageTitle } from '../lib/page-title';
+import { resolveContentPath } from '../lib/pages-base-path';
 import { isUsableExternalHref } from '../lib/placeholder';
 import { getCanonicalPortfolioEntrySlug, getPortfolioEntryDetailBySlug } from '../lib/portfolio';
 import type { CaseStudy, ExperienceTrack, SiteVisualAsset } from '../lib/types';
@@ -153,7 +154,7 @@ function ProjectDetailPage({
           {visual ? (
             <figure className="portfolio-panel portfolio-panel-warm overflow-hidden p-3">
               <img
-                src={visual.src}
+                src={resolveContentPath(visual.src)}
                 alt={visual.alt}
                 className="w-full rounded-[1.5rem] object-cover"
               />
