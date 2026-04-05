@@ -58,41 +58,38 @@ export function AppShell() {
         </main>
 
         <footer className="border-t border-[color:var(--portfolio-border)] py-8 text-sm text-slate-600">
-          <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
-            <p>Platform engineering, data systems, and grounded AI work.</p>
-            <div className="flex flex-wrap gap-4">
-              {isUsableExternalHref(siteContent.links.github) ? (
-                <a
-                  href={siteContent.links.github}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="portfolio-link"
-                >
-                  GitHub
-                </a>
-              ) : (
-                <span>GitHub unavailable</span>
-              )}
-              {isUsableExternalHref(siteContent.links.linkedin) ? (
-                <a
-                  href={siteContent.links.linkedin}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="portfolio-link"
-                >
-                  LinkedIn
-                </a>
-              ) : (
-                <span>LinkedIn unavailable</span>
-              )}
-              {isUsableExternalHref(siteContent.links.email) ? (
-                <a href={siteContent.links.email} className="portfolio-link">
-                  Email
-                </a>
-              ) : (
-                <span>Email unavailable</span>
-              )}
-            </div>
+          <div className="flex flex-wrap justify-end gap-4">
+            {isUsableExternalHref(siteContent.links.github) ? (
+              <a
+                href={siteContent.links.github}
+                target="_blank"
+                rel="noreferrer"
+                className="portfolio-link"
+              >
+                GitHub
+              </a>
+            ) : (
+              <span>GitHub unavailable</span>
+            )}
+            {isUsableExternalHref(siteContent.links.linkedin) ? (
+              <a
+                href={siteContent.links.linkedin}
+                target="_blank"
+                rel="noreferrer"
+                className="portfolio-link"
+              >
+                LinkedIn
+              </a>
+            ) : (
+              <span>LinkedIn unavailable</span>
+            )}
+            {isUsableExternalHref(siteContent.links.email) ? (
+              <a href={siteContent.links.email} className="portfolio-link">
+                Email
+              </a>
+            ) : (
+              <span>Email unavailable</span>
+            )}
           </div>
         </footer>
       </div>
