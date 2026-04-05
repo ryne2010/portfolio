@@ -1,0 +1,40 @@
+{
+  "name": "ryne-portfolio",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "packageManager": "pnpm@10.33.0",
+  "engines": {
+    "node": ">=22.12.0",
+    "pnpm": ">=10.33.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && node scripts/sync-pages-fallback.mjs",
+    "preview": "vite preview",
+    "lint": "biome check . && node scripts/validate-content.mjs",
+    "format": "biome format --write .",
+    "release:check": "node scripts/validate-content.mjs --publish",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "check": "pnpm lint && pnpm typecheck && pnpm test && pnpm build"
+  },
+  "dependencies": {
+    "@tanstack/react-router": "^1.168.10",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.4.10",
+    "@tailwindcss/vite": "^4.2.2",
+    "@types/node": "^25.5.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "tailwindcss": "^4.2.2",
+    "typescript": "^6.0.2",
+    "vite": "^8.0.0",
+    "vitest": "^4.1.2"
+  }
+}

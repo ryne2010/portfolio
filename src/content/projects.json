@@ -1,0 +1,170 @@
+[
+  {
+    "slug": "vendrix-platform-engineering",
+    "title": "Vendrix Platform Engineering",
+    "kind": "case-study",
+    "stage": "portfolio",
+    "featured": true,
+    "year": "2021 to 2023",
+    "tagline": "Managed v2 frontend and backend delivery, ERP integrations, and cloud platform operations for a construction finance product later acquired by Foundation Software.",
+    "summary": "At Vendrix, I managed one engineer while leading frontend and backend delivery for the v2 release, ERP and API-partner integrations, and the GCP platform work behind secure, repeatable operations.",
+    "problem": "Vendrix needed a stronger v2 product release for construction finance workflows, with reliable integrations, a flexible transaction model, secure cloud operations, and delivery leadership that could move product and platform work together.",
+    "tags": ["vendrix", "management", "product-delivery", "erp-integrations", "gcp", "cloud-run"],
+    "stack": [
+      "Cloud Run",
+      "Cloud Functions",
+      "Pub/Sub",
+      "Cloud Build",
+      "Artifact Registry",
+      "Cloudflare"
+    ],
+    "repositoryUrl": "",
+    "demoUrl": "",
+    "referenceUrl": "https://www.thomabravo.com/press-releases/foundation-software-acquires-vendrix-inc",
+    "visual": {
+      "src": "/vendrix-concrete-expo.jpg",
+      "alt": "Vendrix booth at Concrete Expo in Las Vegas",
+      "title": "Concrete Expo, Las Vegas",
+      "caption": "Vendrix represented in front of builders and finance stakeholders at Concrete Expo in Las Vegas."
+    },
+    "approach": [
+      "Manage one engineer while owning the v2 frontend and backend release plan, coordinating product delivery across application work, integrations, and platform concerns.",
+      "Design API-partner and third-party ERP integrations around robust schemas, including a transaction-tagging model that linked spend to budgets, projects, resources, tools, and equipment.",
+      "Architect and operate GCP infrastructure across Cloud Run, Cloud Functions, Pub/Sub, Cloud Tasks, Scheduler, and storage-triggered workflows while improving CI/CD, migration paths, and observability."
+    ],
+    "architecture": {
+      "runtime": "Frontend and backend services supported transaction capture, enrichment, and downstream workflow execution across partner and ERP-connected flows.",
+      "deployment": "Cloud Build and Artifact Registry provided repeatable, auditable deployments while migration work improved the path from development to production.",
+      "data": "A tagging-oriented transaction schema let customers associate activity with budgets, jobs, resources, and equipment while keeping integration data coherent across systems.",
+      "observability": "Cloud Logging and Cloud Monitoring were wired into the platform so incidents, regressions, and operational risk surfaced quickly."
+    },
+    "outcomes": [
+      "Delivered the v2 release while managing both application delivery and the supporting platform work.",
+      "Shipped a flexible transaction-tagging model that gave customers stronger control over how spend connected to budgets, projects, resources, and equipment.",
+      "Supported the product and software-operations maturity of Vendrix before its acquisition by Foundation Software."
+    ],
+    "notes": [
+      "My role covered management, product delivery, platform engineering, and software operations rather than the acquisition transaction itself.",
+      "The acquisition context is based on the public Foundation Software and Thoma Bravo announcement linked with this project."
+    ]
+  },
+  {
+    "slug": "edgewatch-telemetry",
+    "title": "EdgeWatch Telemetry",
+    "kind": "case-study",
+    "stage": "portfolio",
+    "featured": true,
+    "year": "Current",
+    "tagline": "Offline-first ops capture and edge telemetry with heartbeat monitoring and alert routing.",
+    "summary": "An operations-focused system pairing offline-capable workflows with buffered edge telemetry, health checks, and actionable alerts.",
+    "problem": "Operational data was scattered across photos, notes, and manual checks while connectivity remained unreliable. Critical well status depended on humans noticing problems before the system could.",
+    "tags": ["edge", "telemetry", "offline-first", "alerting", "operations"],
+    "stack": [
+      "TypeScript PWA",
+      "Python",
+      "Raspberry Pi",
+      "Cloud Storage",
+      "Cloud Run",
+      "Monitoring"
+    ],
+    "repositoryUrl": "",
+    "demoUrl": "",
+    "approach": [
+      "Use offline-first capture with local queues, background sync, and deterministic retries so field workflows stay usable under poor connectivity.",
+      "Buffer edge telemetry and sign heartbeat messages so health status remains explicit even when devices reconnect later.",
+      "Route alerts with dedupe, throttling, and quiet-hours controls so operators see actionable signals instead of noise."
+    ],
+    "architecture": {
+      "runtime": "An offline-first PWA handles field capture while a Raspberry Pi agent buffers and forwards telemetry to cloud-side processing and alerting.",
+      "deployment": "Cloud-side services stay lightweight and event-driven so storage, indexing, and alert workflows remain easy to operate.",
+      "data": "Operational records, media, and telemetry events are stored with immutable identifiers and idempotent processing to prevent duplicate handling.",
+      "observability": "Heartbeat health, device state, and alert-routing behavior are surfaced through dashboards and notifications."
+    },
+    "outcomes": [
+      "Reduced manual checks by roughly 60 to 80 percent in agriculture operations work.",
+      "Improved outage detection from roughly 6 to 12 hours to under 10 minutes.",
+      "Showcases reliability patterns for distributed operations where connectivity and field conditions are part of the system design."
+    ],
+    "notes": [
+      "Built to keep ops overhead low while still giving teams searchable records, telemetry visibility, and escalation paths.",
+      "Public summary reflects real agriculture-operations delivery patterns."
+    ]
+  },
+  {
+    "slug": "eventpulse-data-platform",
+    "title": "EventPulse Data Platform",
+    "kind": "case-study",
+    "stage": "portfolio",
+    "featured": true,
+    "year": "Current",
+    "tagline": "Contracts, schema-drift handling, lineage, and replayable warehouse delivery on GCP.",
+    "summary": "A governed data-platform implementation shaped by client work: event-driven ingestion, data contracts, lineage artifacts, curated models, and published data products.",
+    "problem": "Periodic file feeds arrived with changing schemas, limited lineage, and brittle downstream reporting. The goal was to turn manual, error-prone ingestion into a governed and replayable platform.",
+    "tags": ["gcp", "data-platform", "bigquery", "data-contracts", "lineage"],
+    "stack": ["Python", "TypeScript", "Cloud Run", "Pub/Sub", "BigQuery", "Terraform"],
+    "repositoryUrl": "",
+    "demoUrl": "",
+    "approach": [
+      "Define data contracts for incoming feeds, then classify schema drift as additive or breaking before promoting data.",
+      "Capture lineage from raw source through contract version and curated outputs so replay, backfill, and audit workflows stay explicit.",
+      "Model warehouse layers in a raw-to-curated-to-marts pattern and publish governed views or APIs from validated outputs."
+    ],
+    "architecture": {
+      "runtime": "Event-driven processors validate inbound files, persist immutable raw inputs, and load curated warehouse tables and published views.",
+      "deployment": "GCP services are provisioned with Terraform and deployed through CI/CD gates with environment parity and operational runbooks.",
+      "data": "Contracts, validation thresholds, replay and backfill workflows, and lineage artifacts make upstream change visible instead of implicit.",
+      "observability": "Freshness, failures, and anomaly checks feed dashboards and alerts so data-product breakage is caught early."
+    },
+    "outcomes": [
+      "Represents the same architecture patterns used in real client delivery for schema drift, replay and backfill, and governed publishing.",
+      "Creates a reusable foundation for BigQuery analytics, APIs, and downstream decision support.",
+      "Shows how data contracts and lineage become operational controls rather than documentation only."
+    ],
+    "notes": [
+      "NDA-safe summary based on real client platform work.",
+      "Designed to make reprocessing, drift response, and published data products explicit."
+    ]
+  },
+  {
+    "slug": "grounded-knowledge-platform",
+    "title": "Grounded Knowledge Platform",
+    "kind": "case-study",
+    "stage": "portfolio",
+    "featured": false,
+    "year": "Current",
+    "tagline": "Citation-backed retrieval with refusal mode, evaluation gates, and confidentiality-aware deployment patterns.",
+    "summary": "A grounded AI knowledge system focused on content architecture, metadata strategy, operational safety, and evidence-backed answers.",
+    "problem": "High-value operational and policy knowledge lived in documents, making lookup slow and answer quality inconsistent. The system needed to speed retrieval without sacrificing confidentiality or traceability.",
+    "tags": ["rag", "knowledge-systems", "evaluation", "security", "gcp"],
+    "stack": [
+      "Python",
+      "TypeScript",
+      "Cloud Run",
+      "Postgres/pgvector",
+      "Terraform",
+      "Cloud Logging"
+    ],
+    "repositoryUrl": "",
+    "demoUrl": "",
+    "approach": [
+      "Ingest and enrich documents with metadata, classification tags, and retrieval-friendly chunking before indexing.",
+      "Require citations and refusal behavior so the system returns grounded answers or clearly declines when evidence is insufficient.",
+      "Tie retrieval quality and safety to an evaluation harness so changes are regression-tested over time."
+    ],
+    "architecture": {
+      "runtime": "Containerized services handle ingestion, indexing, retrieval, and answer generation with deployment posture matched to data sensitivity.",
+      "deployment": "Public-safe environments use Cloud Run and Terraform patterns; confidentiality-first variants can stay inside a controlled boundary.",
+      "data": "Document metadata, classification tags, retention signals, and citation links are treated as first-class parts of the system.",
+      "observability": "Audit logs, evaluation runs, answer latency, and refusal behavior provide operational feedback instead of blind prompting."
+    },
+    "outcomes": [
+      "Reduced document lookup from roughly 5 to 10 minutes to under 1 minute in applied client work.",
+      "Improved ownership-transition readiness with source-cited answers instead of undocumented tribal knowledge.",
+      "Demonstrates secure delivery patterns that span public-safe demos and confidentiality-first deployments."
+    ],
+    "notes": [
+      "Built around citation-required retrieval, refusal mode, and evaluation regression rather than chatbot-style free-form generation.",
+      "Summarized in public-safe terms while reflecting real consulting delivery patterns."
+    ]
+  }
+]

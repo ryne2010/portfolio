@@ -1,0 +1,24 @@
+[project]
+name = "ryne-portfolio"
+description = "Static-first portfolio on GitHub Pages with a single hosted GCP demo link"
+
+[harness]
+fail_fast = true
+
+[autodetect]
+python_runner = "python"
+node_runner = "pnpm"
+node_recursive = false
+skip_missing_tools = true
+
+[commands]
+fmt = "corepack pnpm format"
+lint = "corepack pnpm lint"
+test = "corepack pnpm test"
+typecheck = "corepack pnpm typecheck"
+build = "corepack pnpm build"
+
+[paths]
+source = ["src", "public"]
+tests = ["src"]
+docs = ["docs"]

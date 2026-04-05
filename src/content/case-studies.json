@@ -1,0 +1,125 @@
+[
+  {
+    "slug": "vendrix-platform-maturity",
+    "title": "Vendrix: platform maturity before acquisition",
+    "summary": "Cloud platform, migration, and software-operations work behind a construction finance product later acquired by Foundation Software.",
+    "relatedProjectSlug": "vendrix-platform-engineering",
+    "sections": [
+      {
+        "title": "Leadership",
+        "body": [
+          "I managed one engineer while owning the v2 frontend and backend release path, coordinating product delivery across application work, partner integrations, and platform changes.",
+          "That work required direct prioritization across feature scope, architecture decisions, and operational readiness rather than treating platform and product work as separate tracks."
+        ]
+      },
+      {
+        "title": "Problem",
+        "body": [
+          "Vendrix needed a stronger v2 release for construction finance workflows while the product and customer footprint were still growing.",
+          "The system had to support API and ERP integrations, a more expressive transaction model, repeatable deployments, and tighter security controls without slowing engineering down."
+        ]
+      },
+      {
+        "title": "Product and platform work",
+        "body": [
+          "I designed partner and third-party ERP integrations around robust schemas, including a transaction-tagging model that let customers link spend to budgets, projects, resources, tools, and equipment.",
+          "I also owned GCP platform architecture across Cloud Run, Cloud Functions, Pub/Sub, Cloud Tasks, Scheduler, Cloud Storage events, IAM, Secret Manager, Cloud Build, and Cloud Monitoring, including migration and hardening work."
+        ]
+      },
+      {
+        "title": "Acquisition context",
+        "body": [
+          "Foundation Software announced the acquisition of Vendrix, describing Vendrix as a construction financial management platform and emphasizing its software fit with the broader product suite.",
+          "My contribution was on the delivery and platform side of that fit: release ownership, integrations, schema design, deployability, security, migration work, logging, monitoring, and operational readiness."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "edgewatch-offline-ops",
+    "title": "Offline ops and edge telemetry",
+    "summary": "An operations system that treats unreliable connectivity, device health, and alert quality as first-class design constraints.",
+    "relatedProjectSlug": "edgewatch-telemetry",
+    "sections": [
+      {
+        "title": "Problem",
+        "body": [
+          "Operational data lived across paper receipts, messages, photos, and manual checks, while connectivity remained unreliable.",
+          "Critical well status needed faster detection and clearer escalation than human polling could provide."
+        ]
+      },
+      {
+        "title": "Architecture",
+        "body": [
+          "The solution paired an offline-first PWA with local queues and background sync alongside a Raspberry Pi telemetry agent that buffered readings and sent signed heartbeat messages.",
+          "Cloud-side storage, indexing, and alerting were built with idempotent processing so reconnects and repeated sends did not corrupt the record."
+        ]
+      },
+      {
+        "title": "Outcome",
+        "body": [
+          "Manual checks dropped by roughly 60 to 80 percent while outage detection improved from six to twelve hours to under ten minutes.",
+          "Alert routing rules for quiet hours, dedupe, and throttling kept operators focused on actionable issues instead of notification noise."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "real-estate-investment-analytics",
+    "title": "Real estate investment analytics on the same platform patterns",
+    "summary": "Applied the same ingestion and governance approach to assessor-delivered spreadsheets, parcel analytics, and forecasting.",
+    "relatedProjectSlug": "eventpulse-data-platform",
+    "sections": [
+      {
+        "title": "Problem",
+        "body": [
+          "Manual assessor-delivered spreadsheets and fragmented analytics slowed decision-making and created reporting defects.",
+          "The platform needed freshness, auditability, and an architecture that could tolerate ongoing feed variation."
+        ]
+      },
+      {
+        "title": "Implementation",
+        "body": [
+          "The solution automated ingestion into curated warehouse models with validation, anomaly checks, schema drift handling, and replay and backfill support.",
+          "On top of the warehouse, the system added parcel-level geospatial analytics, alerting rules, and a forecasting MVP with backtesting and monitoring."
+        ]
+      },
+      {
+        "title": "Results",
+        "body": [
+          "Data freshness improved from roughly one to three days after receipt to under fifteen minutes.",
+          "Forecasting backtests landed around 12 to 15 percent MAPE compared with an 18 to 22 percent baseline, while reporting defects dropped through automated validation."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "grounded-knowledge-governance",
+    "title": "Grounded knowledge with governance and evaluation",
+    "summary": "A knowledge system built around metadata, citations, refusal behavior, and operational controls instead of trust-by-default generation.",
+    "relatedProjectSlug": "grounded-knowledge-platform",
+    "sections": [
+      {
+        "title": "Problem",
+        "body": [
+          "Important policy and procedure knowledge lived in documents, making answers inconsistent and lookup expensive.",
+          "The system needed to improve retrieval quality while maintaining confidentiality boundaries and clear auditability."
+        ]
+      },
+      {
+        "title": "Architecture",
+        "body": [
+          "Documents are ingested with metadata such as classification tags and retention flags before being indexed for hybrid retrieval.",
+          "Responses require citations, refusal mode is enabled when evidence is weak, and evaluation regressions are tied to model or index changes."
+        ]
+      },
+      {
+        "title": "Controls",
+        "body": [
+          "Matter-scoped or role-scoped access, encryption, audit logs, and restore drills are part of the operating model rather than add-ons.",
+          "This keeps the system useful for sensitive environments without turning it into an opaque black box."
+        ]
+      }
+    ]
+  }
+]

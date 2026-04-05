@@ -1,0 +1,115 @@
+{
+  "name": "Ryne Schroder",
+  "headline": "Engineering leader with experience spanning a $200M construction program at ESCO, product and platform ownership at Vendrix, and later data, operations, and AI systems on GCP.",
+  "location": "Denver, Colorado",
+  "availability": "Open to senior/staff platform engineering, data architecture, and cloud plus AI systems roles.",
+  "summary": [
+    "At ESCO, I managed a $200M project, directly managed 8 engineers, and coordinated delivery with the vice president of ESCO and client representatives.",
+    "At Vendrix, I managed one engineer while leading frontend and backend delivery for the v2 release, including ERP integrations and a transaction-tagging model that let customers link spend to budgets, projects, resources, and equipment. Foundation Software later acquired Vendrix.",
+    "After Vendrix, I applied the same operating discipline to EdgeWatch-style field systems, governed data platforms, and grounded AI knowledge systems for consulting clients."
+  ],
+  "focusAreas": [
+    "Engineering management, delivery ownership, and stakeholder coordination",
+    "Vendrix platform and product work: v2 release leadership, ERP integrations, tagging schemas, and GCP operations",
+    "EdgeWatch and offline-first operations",
+    "Governed data platforms, BigQuery, replay/backfills, and analytics",
+    "Grounded AI knowledge systems with citations and evaluation"
+  ],
+  "highlights": [
+    {
+      "label": "ESCO scope",
+      "value": "$200M project / 8 engineers"
+    },
+    {
+      "label": "Vendrix release",
+      "value": "Managed v2 delivery"
+    },
+    {
+      "label": "Vendrix outcome",
+      "value": "Acquired by Foundation Software"
+    }
+  ],
+  "links": {
+    "email": "mailto:ryne201011@gmail.com",
+    "github": "https://github.com/ryne2010",
+    "linkedin": "https://www.linkedin.com/in/ryne-schroder/",
+    "resume": "/ryne-schroder-resume-2026-data-architect.pdf"
+  },
+  "cta": {
+    "primaryLabel": "View portfolio",
+    "primaryHref": "/portfolio",
+    "secondaryLabel": "Get in touch",
+    "secondaryHref": "/contact"
+  },
+  "setupNotice": "",
+  "signalsOfFit": [
+    "ESCO: managed a $200M project, 8 direct reports, and executive/client coordination",
+    "Vendrix: managed 1 engineer while leading v2 frontend and backend delivery, ERP integrations, and transaction-tagging design",
+    "Vendrix: GCP platform ownership, App Engine to Cloud Run migration, CI/CD, IAM, KMS, logging, and monitoring",
+    "EdgeWatch: offline-first PWA workflows, Raspberry Pi telemetry, alert routing, and operator visibility",
+    "Data platforms and AI: event-driven ingestion, BigQuery, schema drift handling, replay/backfills, retrieval with citations, and evaluation"
+  ],
+  "about": {
+    "title": "Civil engineering, agriculture, and software delivery all shaped the way I lead and build.",
+    "intro": [
+      "I came into software through civil engineering and real-world operations, so I tend to think first about constraints, failure modes, coordination, and what happens when a system has to work outside a perfect demo.",
+      "That showed up early at ESCO, where I managed a $200M project, directly managed 8 engineers, and worked with the vice president of ESCO and client representatives to keep delivery, reporting, and risk aligned.",
+      "It carried forward at Vendrix, where I managed one engineer while owning the v2 frontend and backend release, ERP integrations, transaction-tagging design, and the GCP platform work behind a construction finance product that Foundation Software later acquired."
+    ],
+    "personal": [
+      "My background in agriculture and civil engineering gave me a lasting respect for systems that have to survive real operating conditions, not just good intentions.",
+      "That is still how I approach software engineering: build for operators, analysts, stakeholders, and customers who need something dependable, understandable, and useful when the stakes are real."
+    ],
+    "qualifications": [
+      "Engineering management with direct reports, executive coordination, client communication, and ownership of large delivery scopes.",
+      "Hands-on software engineering across frontend, backend, cloud infrastructure, CI/CD, IAM, observability, migrations, and operational hardening.",
+      "Product and platform leadership spanning ERP integrations, event-driven systems, schema design, release management, and secure cloud delivery on GCP.",
+      "Data and AI architecture covering BigQuery platforms, schema-drift handling, replay and backfill workflows, forecasting, and grounded retrieval systems with citations and evaluation."
+    ],
+    "currentFocus": [
+      "Most recently, as an independent consultant, I have been building software systems for real estate, law, and agriculture clients: event-driven data platforms, forecasting systems, grounded AI knowledge tools, and offline-first operational software with edge telemetry.",
+      "Those engagements have kept me current in modern software engineering across TypeScript, Python, GCP, Terraform, Cloud Run, Pub/Sub, BigQuery, monitoring, and security controls while staying close to business operations."
+    ],
+    "closing": "I am at my best in roles that need both leadership and execution: someone who can manage scope and stakeholders, design the architecture, and still do the implementation work required to ship."
+  },
+  "visuals": {
+    "headshot": {
+      "src": "/ryne-schroder-headshot.jpg",
+      "alt": "Portrait of Ryne Schroder",
+      "title": "Ryne Schroder",
+      "caption": "Software engineering leadership shaped by a civil engineering and agriculture background."
+    },
+    "farmPhoto": {
+      "src": "/ryne-family-farm.jpg",
+      "alt": "Ryne Schroder standing on the family farm",
+      "title": "Family farm",
+      "caption": "Agriculture shaped how I think about operations, stewardship, and systems that have to work under real conditions."
+    },
+    "vendrixNotice": {
+      "src": "/vendrix-acquisition-notice.jpg",
+      "alt": "Foundation Software acquires Vendrix announcement",
+      "title": "Foundation Software acquires Vendrix",
+      "caption": "Public acquisition notice tied to the Vendrix product and platform work highlighted across the portfolio."
+    },
+    "escoProjects": [
+      {
+        "src": "/esco-river-run-ranch.jpg",
+        "alt": "River Run Ranch project site during ESCO construction work",
+        "title": "River Run Ranch",
+        "caption": "$200M ESCO project with delivery, coordination, and field execution responsibility."
+      },
+      {
+        "src": "/esco-sylvan-lake.jpg",
+        "alt": "Sylvan Lake project aerial view during ESCO work",
+        "title": "Sylvan Lake",
+        "caption": "ESCO project work that shaped my approach to operations, sequencing, and dependable execution."
+      },
+      {
+        "src": "/esco-dam-conference.jpg",
+        "alt": "ESCO team at a dam conference in Orlando",
+        "title": "Dam conference, Orlando",
+        "caption": "ESCO represented at an industry conference in Orlando, reflecting the client-facing and field-facing side of the work."
+      }
+    ]
+  }
+}

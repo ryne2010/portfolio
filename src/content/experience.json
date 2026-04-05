@@ -1,0 +1,81 @@
+{
+  "intro": [
+    "At ESCO, I managed a $200M project, directly managed 8 engineers, and coordinated delivery with the vice president of ESCO and client representatives.",
+    "At Vendrix, I managed one engineer while leading the v2 frontend and backend release, ERP integrations, transaction-tagging design, and the GCP platform work behind a construction finance product. Foundation Software later acquired Vendrix.",
+    "After Vendrix, I applied the same operating discipline to EdgeWatch-style field systems and to consulting engagements in data platforms, forecasting, and grounded AI knowledge systems."
+  ],
+  "tracks": [
+    {
+      "slug": "management-delivery-leadership",
+      "title": "Management and delivery leadership",
+      "summary": "Lead engineers, coordinate executives and clients, and keep major releases and programs moving without losing technical depth.",
+      "bullets": [
+        "ESCO: managed a $200M project, directly managed 8 engineers, and coordinated with the vice president of ESCO and client representatives",
+        "Vendrix: managed 1 engineer while owning the v2 frontend and backend release across product work, integrations, and platform changes",
+        "Operate comfortably at both levels: stakeholder alignment, prioritization, and team delivery alongside hands-on architecture and implementation"
+      ]
+    },
+    {
+      "slug": "vendrix-product-platform-ownership",
+      "relatedProjectSlug": "vendrix-platform-engineering",
+      "title": "Vendrix product and platform ownership",
+      "summary": "Own the product and platform path together so releases, integrations, and operations mature as one system.",
+      "bullets": [
+        "Led frontend and backend delivery for the v2 release while managing partner integrations and core platform work",
+        "Designed transaction and tagging schemas that let customers connect spend to budgets, projects, resources, tools, and equipment across ERP-linked workflows",
+        "Architected and operated production infrastructure on GCP with Cloud Run, Cloud Functions, IAM, Cloud Build, logging, monitoring, and migration work"
+      ]
+    },
+    {
+      "slug": "edgewatch-field-operations",
+      "relatedProjectSlug": "edgewatch-telemetry",
+      "title": "EdgeWatch and field operations",
+      "summary": "Build offline-capable operational systems where connectivity and device health are part of the architecture, not edge cases.",
+      "bullets": [
+        "Offline-first PWA workflows for receipts, timesheets, photos, notes, and searchable exports",
+        "Buffered Raspberry Pi telemetry with heartbeats, threshold alerts, and device-health monitoring",
+        "Alert dedupe, throttling, and quiet-hours rules so operators see actionable events instead of noise"
+      ]
+    },
+    {
+      "slug": "data-platforms-forecasting",
+      "relatedProjectSlug": "eventpulse-data-platform",
+      "title": "Data platforms and forecasting",
+      "summary": "Design governed ingestion and analytics systems that turn manual feeds into decision-ready data products.",
+      "bullets": [
+        "Event-driven ingestion with schema-drift handling, validation gates, and replay and backfill workflows",
+        "Curated warehouse modeling in raw-to-curated-to-marts layers with versioned published views and APIs",
+        "Geospatial analytics, alerting, and forecasting backtests tied to monitoring instead of spreadsheet-only workflows"
+      ]
+    },
+    {
+      "slug": "grounded-ai-knowledge-systems",
+      "relatedProjectSlug": "grounded-knowledge-platform",
+      "title": "Grounded AI knowledge systems",
+      "summary": "Ship evidence-backed knowledge tools that improve lookup speed without giving up auditability, citations, or control.",
+      "bullets": [
+        "Hybrid retrieval, citation-required responses, refusal mode, and regression harnesses for retrieval quality",
+        "Metadata strategy, document classification, audit logging, and restore drills for confidentiality-first environments",
+        "Operational AI that improves lookup speed and transition readiness without hiding its evidence trail"
+      ]
+    }
+  ],
+  "deliveryLoop": [
+    {
+      "title": "Harden the platform",
+      "description": "Start with runtime choices, network boundaries, IAM, encryption, and failure modes that can survive real production traffic."
+    },
+    {
+      "title": "Automate the delivery path",
+      "description": "Use CI/CD, migrations, and repeatable environment bring-up so the platform can keep moving without depending on manual heroics."
+    },
+    {
+      "title": "Instrument the system",
+      "description": "Add logging, monitoring, alerts, and data-quality checks so problems surface early and troubleshooting stays bounded."
+    },
+    {
+      "title": "Make recovery explicit",
+      "description": "Ship runbooks, replay and backfill procedures, restore drills, and operational checklists so incidents are survivable."
+    }
+  ]
+}

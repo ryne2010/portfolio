@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+  font-family: "Manrope", "Avenir Next", "Segoe UI", sans-serif;
+  background-color: #f2e9dc;
+  color: #1f2522;
+  --portfolio-bg: #f2e9dc;
+  --portfolio-bg-soft: #fbf5ec;
+  --portfolio-surface: rgba(253, 248, 242, 0.92);
+  --portfolio-surface-warm: rgba(244, 232, 218, 0.93);
+  --portfolio-surface-cool: rgba(232, 239, 233, 0.92);
+  --portfolio-border: #cfbba3;
+  --portfolio-border-strong: #a88464;
+  --portfolio-ink: #1f2522;
+  --portfolio-muted: #62655e;
+  --portfolio-accent: #8b4a35;
+  --portfolio-accent-strong: #6f3828;
+  --portfolio-accent-soft: #ebd8c9;
+  --portfolio-link: #7a4634;
+  --portfolio-link-strong: #5c3224;
+  --portfolio-cool: #516558;
+  --portfolio-cool-ink: #355047;
+  --portfolio-danger: #8a4734;
+  --portfolio-danger-soft: #f7e8e0;
+  --portfolio-shadow: 0 30px 70px -52px rgba(69, 48, 31, 0.34);
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--portfolio-bg);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 0% 0%, rgba(139, 74, 53, 0.18), transparent 26%),
+    radial-gradient(circle at 100% 8%, rgba(81, 101, 88, 0.14), transparent 23%),
+    linear-gradient(180deg, #fbf5ed 0%, #f1e6d7 50%, #f7efe4 100%);
+  color: var(--portfolio-ink);
+  font-family: inherit;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  opacity: 0.28;
+  background-image:
+    linear-gradient(rgba(137, 102, 78, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(137, 102, 78, 0.05) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.34), transparent 78%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(139, 74, 53, 0.22);
+  color: var(--portfolio-ink);
+}
+
+.portfolio-display {
+  font-family: "Fraunces", "Iowan Old Style", "Palatino Linotype", serif;
+  letter-spacing: -0.045em;
+  line-height: 0.96;
+}
+
+.portfolio-title {
+  font-family: "Fraunces", "Iowan Old Style", "Palatino Linotype", serif;
+  letter-spacing: -0.035em;
+  line-height: 1;
+}
+
+.portfolio-kicker {
+  color: var(--portfolio-accent-strong);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.portfolio-ink {
+  color: var(--portfolio-ink);
+}
+
+.portfolio-muted {
+  color: var(--portfolio-muted);
+}
+
+.portfolio-accent {
+  color: var(--portfolio-accent);
+}
+
+.portfolio-cool-text {
+  color: var(--portfolio-cool-ink);
+}
+
+.portfolio-rule {
+  background: rgba(168, 132, 100, 0.42);
+}
+
+.portfolio-panel {
+  border: 1px solid var(--portfolio-border);
+  border-radius: 2rem;
+  box-shadow: var(--portfolio-shadow);
+  overflow: hidden;
+  position: relative;
+}
+
+.portfolio-panel::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(168, 132, 100, 0.88), transparent);
+  pointer-events: none;
+}
+
+.portfolio-panel-soft {
+  background:
+    linear-gradient(180deg, rgba(255, 252, 248, 0.96), rgba(250, 244, 236, 0.93)),
+    var(--portfolio-surface);
+}
+
+.portfolio-panel-warm {
+  background:
+    linear-gradient(180deg, rgba(247, 237, 224, 0.97), rgba(240, 226, 210, 0.94)),
+    var(--portfolio-surface-warm);
+}
+
+.portfolio-panel-cool {
+  background:
+    linear-gradient(180deg, rgba(239, 245, 240, 0.96), rgba(229, 236, 231, 0.94)),
+    var(--portfolio-surface-cool);
+  border-color: rgba(141, 166, 152, 0.62);
+}
+
+.portfolio-panel-danger {
+  background:
+    linear-gradient(180deg, rgba(252, 242, 238, 0.96), rgba(246, 229, 223, 0.94)),
+    var(--portfolio-danger-soft);
+  border-color: rgba(173, 121, 100, 0.55);
+}
+
+.portfolio-inset {
+  background: rgba(255, 250, 244, 0.78);
+  border: 1px solid rgba(207, 187, 163, 0.84);
+  border-radius: 1.45rem;
+}
+
+.portfolio-chip {
+  background: rgba(249, 242, 232, 0.88);
+  border: 1px solid rgba(168, 132, 100, 0.58);
+  border-radius: 999px;
+  color: var(--portfolio-link);
+}
+
+.portfolio-button-primary,
+.portfolio-button-secondary {
+  align-items: center;
+  border-radius: 999px;
+  display: inline-flex;
+  font-weight: 700;
+  justify-content: center;
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease,
+    transform 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.portfolio-button-primary {
+  background: linear-gradient(
+    180deg,
+    var(--portfolio-accent) 0%,
+    var(--portfolio-accent-strong) 100%
+  );
+  box-shadow: 0 14px 28px -22px rgba(111, 56, 40, 0.9);
+  color: #fff9f3;
+}
+
+.portfolio-button-primary:hover {
+  background: linear-gradient(180deg, #7c422f 0%, #623123 100%);
+  transform: translateY(-1px);
+}
+
+.portfolio-button-secondary {
+  background: rgba(251, 244, 236, 0.96);
+  border: 1px solid rgba(168, 132, 100, 0.72);
+  color: var(--portfolio-link);
+}
+
+.portfolio-button-secondary:hover {
+  background: rgba(244, 233, 220, 0.96);
+  border-color: rgba(139, 74, 53, 0.68);
+  color: var(--portfolio-link-strong);
+  transform: translateY(-1px);
+}
+
+.portfolio-link {
+  color: var(--portfolio-link);
+  transition: color 160ms ease;
+}
+
+.portfolio-link:hover {
+  color: var(--portfolio-link-strong);
+}
+
+.portfolio-nav-link {
+  border: 1px solid transparent;
+  border-radius: 999px;
+  color: var(--portfolio-muted);
+  font-weight: 500;
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease;
+}
+
+.portfolio-nav-link:hover {
+  background: rgba(249, 240, 230, 0.95);
+  border-color: rgba(207, 187, 163, 0.76);
+  color: var(--portfolio-link);
+}
+
+.portfolio-nav-link-active {
+  background: rgba(235, 216, 201, 0.72);
+  border-color: rgba(168, 132, 100, 0.7);
+  box-shadow: 0 12px 26px -22px rgba(69, 48, 31, 0.55);
+  color: var(--portfolio-accent-strong);
+}
