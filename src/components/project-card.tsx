@@ -21,7 +21,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
   const referenceUrl = project.referenceUrl ?? '';
 
   return (
-    <article className="portfolio-panel portfolio-panel-soft group flex h-full flex-col p-6 transition-transform hover:-translate-y-1 hover:border-[color:var(--portfolio-border-strong)]">
+    <article className="portfolio-interactive-surface portfolio-interactive-surface-strong portfolio-panel portfolio-panel-soft group flex h-full flex-col p-6">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <span className="portfolio-chip px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em]">
           {kindLabel(project.kind)}
@@ -39,7 +39,10 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
       <div className="mt-6 flex flex-wrap gap-2">
         {project.tags.map((tag) => (
-          <span key={tag} className="portfolio-chip px-3 py-1 text-xs text-slate-600">
+          <span
+            key={tag}
+            className="portfolio-chip portfolio-chip-interactive px-3 py-1 text-xs text-slate-600"
+          >
             {tag}
           </span>
         ))}

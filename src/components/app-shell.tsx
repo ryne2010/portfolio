@@ -15,11 +15,14 @@ export function AppShell() {
   return (
     <div className="relative min-h-screen overflow-hidden text-slate-900">
       <div className="mx-auto flex min-h-screen max-w-7xl flex-col px-4 sm:px-6 lg:px-8">
-        <header className="portfolio-panel portfolio-panel-soft sticky top-0 z-20 mt-4 px-4 py-4 backdrop-blur xl:px-6">
+        <header className="portfolio-header-shell portfolio-panel sticky top-0 z-20 mt-4 px-4 py-4 backdrop-blur xl:px-6">
           <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
             <div className="space-y-1">
               <p className="portfolio-kicker">
-                {siteContent.location} / Data Architecture / Cloud Platforms / Applied AI
+                {siteContent.location} / Full-stack Engineering / Data Architecture / Cloud
+                Platforms
+                {' / '}
+                Applied AI
               </p>
               <Link
                 to="/"

@@ -18,7 +18,7 @@ function PortfolioPage() {
       />
 
       <section className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
-        <div className="portfolio-panel portfolio-panel-soft space-y-5 p-6">
+        <div className="portfolio-interactive-surface portfolio-interactive-surface-subtle portfolio-panel portfolio-panel-soft space-y-5 p-6">
           {experienceContent.intro.map((paragraph) => (
             <p key={paragraph} className="text-base leading-8 text-slate-700">
               {paragraph}
@@ -26,7 +26,10 @@ function PortfolioPage() {
           ))}
           <div className="flex flex-wrap gap-2 pt-2">
             {siteContent.focusAreas.map((focusArea) => (
-              <span key={focusArea} className="portfolio-chip px-3 py-1 text-sm text-slate-700">
+              <span
+                key={focusArea}
+                className="portfolio-chip portfolio-chip-interactive px-3 py-1 text-sm text-slate-700"
+              >
                 {focusArea}
               </span>
             ))}
@@ -36,7 +39,10 @@ function PortfolioPage() {
         <div className="space-y-6">
           <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
             {siteContent.highlights.map((highlight) => (
-              <div key={highlight.label} className="portfolio-panel portfolio-panel-warm p-5">
+              <div
+                key={highlight.label}
+                className="portfolio-interactive-surface portfolio-interactive-surface-subtle portfolio-panel portfolio-panel-warm p-5"
+              >
                 <p className="portfolio-kicker">{highlight.label}</p>
                 <p className="portfolio-ink mt-3 text-2xl font-semibold tracking-tight">
                   {highlight.value}
@@ -45,7 +51,7 @@ function PortfolioPage() {
             ))}
           </div>
 
-          <div className="portfolio-panel portfolio-panel-cool p-6">
+          <div className="portfolio-interactive-surface portfolio-interactive-surface-subtle portfolio-panel portfolio-panel-cool p-6">
             <p className="portfolio-kicker portfolio-cool-text">Execution pattern</p>
             <div className="mt-4 space-y-4">
               {experienceContent.deliveryLoop.map((step, index) => (
@@ -70,7 +76,10 @@ function PortfolioPage() {
 
         <div className="grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
           {portfolioExperienceEntries.map((entry) => (
-            <article key={entry.slug} className="portfolio-panel portfolio-panel-warm p-6">
+            <article
+              key={entry.slug}
+              className="portfolio-interactive-surface portfolio-interactive-surface-subtle portfolio-panel portfolio-panel-warm p-6"
+            >
               <p className="portfolio-kicker">{entry.meta}</p>
               <h3 className="portfolio-ink mt-3 text-2xl font-semibold">{entry.title}</h3>
               <p className="mt-3 text-sm leading-7 text-slate-600">{entry.summary}</p>

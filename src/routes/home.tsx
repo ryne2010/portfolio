@@ -73,7 +73,7 @@ function HomePage() {
             {siteContent.focusAreas.map((focusArea) => (
               <span
                 key={focusArea}
-                className="portfolio-chip px-4 py-2 text-sm font-medium text-slate-700"
+                className="portfolio-chip portfolio-chip-interactive px-4 py-2 text-sm font-medium text-slate-700"
               >
                 {focusArea}
               </span>
@@ -82,21 +82,26 @@ function HomePage() {
         </div>
 
         <div className="space-y-4">
-          <figure className="portfolio-panel portfolio-panel-soft overflow-hidden p-3">
-            <img
-              src={resolveContentPath(siteContent.visuals.headshot.src)}
-              alt={siteContent.visuals.headshot.alt}
-              className="aspect-[4/5] w-full rounded-[1.5rem] object-cover"
-            />
-            <figcaption className="px-3 pb-2 pt-4">
-              <p className="portfolio-kicker">{siteContent.visuals.headshot.title}</p>
-              <p className="mt-2 text-sm leading-7 text-slate-600">
-                {siteContent.visuals.headshot.caption}
-              </p>
-            </figcaption>
-          </figure>
+          <Link
+            to="/contact"
+            className="portfolio-interactive-surface portfolio-interactive-surface-strong portfolio-panel portfolio-panel-soft block overflow-hidden p-3"
+          >
+            <figure>
+              <img
+                src={resolveContentPath(siteContent.visuals.headshot.src)}
+                alt={siteContent.visuals.headshot.alt}
+                className="portfolio-media-frame aspect-[4/5] w-full rounded-[1.5rem] object-cover"
+              />
+              <figcaption className="px-3 pb-2 pt-4">
+                <p className="portfolio-kicker">{siteContent.visuals.headshot.title}</p>
+                <p className="mt-2 text-sm leading-7 text-slate-600">
+                  {siteContent.visuals.headshot.caption}
+                </p>
+              </figcaption>
+            </figure>
+          </Link>
 
-          <div className="portfolio-panel portfolio-panel-warm p-6">
+          <div className="portfolio-interactive-surface portfolio-interactive-surface-subtle portfolio-panel portfolio-panel-warm p-6">
             <p className="portfolio-kicker">Availability</p>
             <p className="portfolio-ink mt-4 text-xl font-semibold leading-8">
               {siteContent.availability}
@@ -106,7 +111,10 @@ function HomePage() {
 
           <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
             {siteContent.highlights.map((highlight) => (
-              <div key={highlight.label} className="portfolio-panel portfolio-panel-soft p-5">
+              <div
+                key={highlight.label}
+                className="portfolio-interactive-surface portfolio-interactive-surface-subtle portfolio-panel portfolio-panel-soft p-5"
+              >
                 <p className="portfolio-kicker text-slate-500">{highlight.label}</p>
                 <p className="portfolio-ink mt-3 text-2xl font-semibold tracking-tight">
                   {highlight.value}
@@ -115,12 +123,12 @@ function HomePage() {
             ))}
           </div>
 
-          <div className="portfolio-panel portfolio-panel-cool overflow-hidden p-3">
+          <div className="portfolio-interactive-surface portfolio-interactive-surface-strong portfolio-panel portfolio-panel-cool overflow-hidden p-3">
             <figure className="space-y-2">
               <img
                 src={resolveContentPath(siteContent.visuals.vendrixNotice.src)}
                 alt={siteContent.visuals.vendrixNotice.alt}
-                className="aspect-[16/9] w-full rounded-[1.5rem] object-cover"
+                className="portfolio-media-frame aspect-[16/9] w-full rounded-[1.5rem] object-cover"
               />
               <figcaption className="px-1 text-xs leading-5 text-slate-600">
                 {siteContent.visuals.vendrixNotice.title}
@@ -169,7 +177,7 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="portfolio-panel portfolio-panel-soft p-6">
+      <section className="portfolio-interactive-surface portfolio-interactive-surface-subtle portfolio-panel portfolio-panel-soft p-6">
         <SectionHeading
           eyebrow="What I owned"
           title="The work centers on delivery ownership, management scope, and systems that stay explainable under pressure."

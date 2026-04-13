@@ -23,7 +23,7 @@ function ExperienceDetailPage({
       <SectionHeading eyebrow="Experience detail" title={title} description={summary} />
 
       <section className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
-        <div className="portfolio-panel portfolio-panel-soft p-6">
+        <div className="portfolio-interactive-surface portfolio-interactive-surface-subtle portfolio-panel portfolio-panel-soft p-6">
           <p className="portfolio-kicker">Scope</p>
           <ul className="mt-4 space-y-3 text-sm leading-7 text-slate-700">
             {bullets.map((bullet) => (
@@ -34,7 +34,7 @@ function ExperienceDetailPage({
           </ul>
         </div>
 
-        <div className="portfolio-panel portfolio-panel-cool p-6">
+        <div className="portfolio-interactive-surface portfolio-interactive-surface-subtle portfolio-panel portfolio-panel-cool p-6">
           <p className="portfolio-kicker portfolio-cool-text">Execution pattern</p>
           <div className="mt-4 space-y-4">
             {experienceContent.deliveryLoop.map((step, index) => (
@@ -133,7 +133,7 @@ function ProjectDetailPage({
       />
 
       <section className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
-        <div className="portfolio-panel portfolio-panel-soft space-y-6 p-6">
+        <div className="portfolio-interactive-surface portfolio-interactive-surface-subtle portfolio-panel portfolio-panel-soft space-y-6 p-6">
           <div>
             <p className="portfolio-kicker">Problem</p>
             <p className="mt-3 text-base leading-8 text-slate-700">{problem}</p>
@@ -152,11 +152,11 @@ function ProjectDetailPage({
 
         <div className="space-y-6">
           {visual ? (
-            <figure className="portfolio-panel portfolio-panel-warm overflow-hidden p-3">
+            <figure className="portfolio-interactive-surface portfolio-interactive-surface-strong portfolio-panel portfolio-panel-warm overflow-hidden p-3">
               <img
                 src={resolveContentPath(visual.src)}
                 alt={visual.alt}
-                className="w-full rounded-[1.5rem] object-cover"
+                className="portfolio-media-frame w-full rounded-[1.5rem] object-cover"
               />
               <figcaption className="space-y-2 px-3 pb-2 pt-4">
                 <p className="portfolio-kicker">{visual.title}</p>
@@ -183,7 +183,7 @@ function ProjectDetailPage({
       </section>
 
       <section className="grid gap-6 lg:grid-cols-2">
-        <div className="portfolio-panel portfolio-panel-soft p-6">
+        <div className="portfolio-interactive-surface portfolio-interactive-surface-subtle portfolio-panel portfolio-panel-soft p-6">
           <p className="portfolio-kicker">Outcome framing</p>
           <ul className="mt-4 space-y-3 text-sm leading-7 text-slate-700">
             {outcomes.map((outcome) => (
@@ -193,7 +193,7 @@ function ProjectDetailPage({
             ))}
           </ul>
         </div>
-        <div className="portfolio-panel portfolio-panel-warm p-6">
+        <div className="portfolio-interactive-surface portfolio-interactive-surface-subtle portfolio-panel portfolio-panel-warm p-6">
           <p className="portfolio-kicker">Operational notes</p>
           <ul className="mt-4 space-y-3 text-sm leading-7 text-slate-700">
             {notes.map((note) => (
@@ -214,7 +214,10 @@ function ProjectDetailPage({
           />
           <div className="grid gap-6 lg:grid-cols-2">
             {experienceTracks.map((track) => (
-              <article key={track.slug} className="portfolio-panel portfolio-panel-cool p-6">
+              <article
+                key={track.slug}
+                className="portfolio-interactive-surface portfolio-interactive-surface-subtle portfolio-panel portfolio-panel-cool p-6"
+              >
                 <p className="portfolio-kicker portfolio-cool-text">{track.title}</p>
                 <p className="mt-3 text-sm leading-7 text-slate-600">{track.summary}</p>
                 <ul className="mt-4 space-y-3 text-sm leading-7 text-slate-700">
@@ -238,7 +241,10 @@ function ProjectDetailPage({
             description="Longer project detail on constraints, implementation choices, and outcomes."
           />
           {caseStudies.map((caseStudy) => (
-            <article key={caseStudy.slug} className="portfolio-panel portfolio-panel-warm p-6">
+            <article
+              key={caseStudy.slug}
+              className="portfolio-interactive-surface portfolio-interactive-surface-subtle portfolio-panel portfolio-panel-warm p-6"
+            >
               <p className="portfolio-kicker">{caseStudy.title}</p>
               <p className="mt-3 text-sm leading-7 text-slate-600">{caseStudy.summary}</p>
               <div className="mt-6 grid gap-4 lg:grid-cols-2">
@@ -258,11 +264,14 @@ function ProjectDetailPage({
         </section>
       ) : null}
 
-      <section className="portfolio-panel portfolio-panel-soft p-6">
+      <section className="portfolio-interactive-surface portfolio-interactive-surface-subtle portfolio-panel portfolio-panel-soft p-6">
         <p className="portfolio-kicker">Stack and tags</p>
         <div className="mt-4 flex flex-wrap gap-2">
           {[...stack, ...tags].map((item) => (
-            <span key={item} className="portfolio-chip px-3 py-1 text-sm text-slate-700">
+            <span
+              key={item}
+              className="portfolio-chip portfolio-chip-interactive px-3 py-1 text-sm text-slate-700"
+            >
               {item}
             </span>
           ))}

@@ -13,7 +13,7 @@ function contactCard(label: string, href: string, helper: string, displayValue?:
   const resolvedHref = resolveContentPath(href);
 
   return (
-    <div className="portfolio-panel portfolio-panel-soft p-6">
+    <div className="portfolio-interactive-surface portfolio-interactive-surface-subtle portfolio-panel portfolio-panel-soft p-6">
       <p className="portfolio-kicker">{label}</p>
       {configured ? (
         <a
