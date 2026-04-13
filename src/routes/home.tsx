@@ -137,9 +137,6 @@ function HomePage() {
             <div className="space-y-3 px-3 pb-2 pt-4">
               <p className="portfolio-kicker portfolio-cool-text">Vendrix</p>
               <p className="text-sm leading-7 text-slate-700">
-                {siteContent.visuals.vendrixNotice.caption}
-              </p>
-              <p className="text-sm leading-7 text-slate-700">
                 I was a founding platform engineer at Vendrix from June 2021 through April 2023,
                 owning cloud platform migrations, deployability, security controls, and
                 observability while also contributing to product delivery.
